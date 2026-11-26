@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "DOWNOVA",
+  "short_name": "DOWNOVA",
+  "version": "2.0.0",
+  "minimum_chrome_version": "120",
+  "description": "Find, save and manage downloadable files from the pages you visit. Direct, permitted files only: no DRM, login or stream bypassing.",
+  "icons": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "action": { "default_title": "DOWNOVA", "default_popup": "popup.html", "default_icon": { "16": "icons/icon16.png", "32": "icons/icon32.png" } },
+  "background": { "service_worker": "background.js", "type": "module" },
+  "permissions": ["downloads", "storage", "contextMenus", "activeTab", "scripting", "notifications", "alarms", "offscreen"],
+  "optional_host_permissions": ["<all_urls>"],
+  "content_security_policy": { "extension_pages": "script-src 'self'; object-src 'self'; base-uri 'none'" }
+}
